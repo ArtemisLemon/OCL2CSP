@@ -18,6 +18,15 @@ import org.chocosolver.solver.variables.IntVar;
 
 
 public class App {
+
+    static String AdjList2String(AdjList a){
+        String out="[";
+        for(int i=0;i<a.vars().length;i++){
+            out += a.vars()[i].getValue()+",";
+        }
+        return out + "]";
+    }
+
     public static void main(String[] args) {
         Model m = new Model();
 
@@ -27,17 +36,22 @@ public class App {
 
         IntVar nullptr = m.intVar(0);
 
-        AdjList a02b = new AdjList(m, 5, b, true, true);
-        AdjListTable b2c = new AdjListTable(m, b, c, c, null, true);
-        navCSP a02b2c = new navCSP(m, a02b, b2c);
+        AdjList a1b = new AdjList(m, 5, b, true, true);
+        AdjListTable b2c = new AdjListTable(m, b, c, c, nullptr, true);
+        navCSP a1b2c = new navCSP(m, a1b, b2c);
         int[] sel = {1,2};
-        Includes.includesAll(m, sel, a02b2c.adjList());
+        Includes.includesAll(m, sel, a1b2c.adjList());
 
 
-        IntVar[] problemVars = ArrayUtils.concat(a02b.vars(),b2c.vars());
+        IntVar[] UMLCSPpbvars = ArrayUtils.concat(a1b.vars(),b2c.vars());
+        IntVar[] OCLCSPpbvars = a1b2c.vars(); //because includesAll
+        IntVar[] problemVars = ArrayUtils.concat(UMLCSPpbvars,OCLCSPpbvars);
+        m.getSolver().setSearch(Search.intVarSearch(problemVars));
         Solution solution = m.getSolver().findSolution();
         if(solution != null){
-            System.out.println(solution.toString());
+            System.out.println("a1->b = "+AdjList2String(a1b));
+            for(int i=0;i<b2c.n;i++)
+                System.out.println("b"+(i+1)+"->c = "+AdjList2String(b2c.adjlist(i)));
         } else {
             System.out.println("mmh");
         }
