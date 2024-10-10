@@ -9,7 +9,7 @@ public class navCSP {
         int n = src.vars().length;
         int nn = table.nn;
         int nnn = n*nn;
-        vars = new IntVar[nnn];
+        vars = m.intVarArray(nnn,table.lb(), table.ub());
 
         int k=0;
         for(int i=0;i<n;i++) for(int j=0;j<nn;j++){ 
@@ -20,5 +20,9 @@ public class navCSP {
 
     IntVar[] vars(){
         return vars;
+    }
+
+    AdjList adjList(){
+        return new AdjList(vars);
     }
 }

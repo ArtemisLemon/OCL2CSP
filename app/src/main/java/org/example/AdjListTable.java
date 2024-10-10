@@ -43,4 +43,12 @@ public class AdjListTable {
     public AdjList adjlist(int i){
         return new AdjList(matrix[i]);
     }
+
+    int lb(){
+        if(!nullptr) return 1;
+        return 0;
+    }
+    int ub(){
+        return d;
+    }
 }
