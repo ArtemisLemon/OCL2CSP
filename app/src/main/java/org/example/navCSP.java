@@ -20,5 +20,5 @@ public class navCSP {
 
     IntVar[] vars(){
         return vars;
-    }   
+    }
 }

@@ -39,4 +39,8 @@ public class AdjListTable {
     public IntVar[] vars(){
         return ArrayUtils.concat(nullptrs, ArrayUtils.flatten(matrix)); //flatten sources, dummies at the beginning (lb++)
     }
+
+    public AdjList adjlist(int i){
+        return new AdjList(matrix[i]);
+    }
 }
