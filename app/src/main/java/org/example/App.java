@@ -3,12 +3,16 @@
  */
 package org.example;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import org.example.AdjList;
+import org.chocosolver.solver.*;
 
+
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Model m = new Model();
+
+        AdjList a02b = new AdjList(m, 5, 6, true, true);
+
+        m.getSolver().printStatistics();
     }
 }
