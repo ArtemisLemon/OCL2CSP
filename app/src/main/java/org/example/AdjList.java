@@ -28,7 +28,11 @@ public class AdjList {
             vars[i] = m.intVar(values[i]);
     }
 
-    IntVar[] value(){
+    public AdjList(IntVar[] vars){
+        this.vars=vars;
+    }
+
+    IntVar[] vars(){
         return vars;
     }
 
