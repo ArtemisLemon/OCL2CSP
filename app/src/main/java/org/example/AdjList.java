@@ -16,8 +16,8 @@ public class AdjList {
     //      - d = last object
 
     IntVar[] vars;
-    public AdjList(Model m, int n, int d, boolean nullptr, boolean set){
-        if (nullptr) vars = m.intVarArray(n,0,d);
+    public AdjList(Model m, int n, int d, IntVar nullptr, boolean set){
+        if (nullptr!=null) vars = m.intVarArray(n,0,d);
                 else vars = m.intVarArray(n,1,d);
         if (set) m.allDifferentExcept0(vars).post(); //(ordered) set
     }
