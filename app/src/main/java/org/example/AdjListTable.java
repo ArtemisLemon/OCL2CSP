@@ -7,9 +7,11 @@ import org.chocosolver.util.tools.ArrayUtils;
 public class AdjListTable {
     IntVar[][] matrix;
     int n, nn, d; boolean nullptr, set;
-    IntVar[] nullptrs; 
+    IntVar[] nullptrs;
+    Model m; 
 
     public AdjListTable(Model m, int n, int nn, int d, IntVar nullptr, boolean set){
+        this.m=m;
         this.n=n;
         this.nn=nn;
         this.d=d;
@@ -50,5 +52,9 @@ public class AdjListTable {
     }
     int ub(){
         return d;
+    }
+
+    void ApplyConstainment(){ //can't be undone
+        m.allDifferentExcept0(vars()).post();
     }
 }
