@@ -1,5 +1,5 @@
-# OCL2Choco
-OCL nodes modeled using Choco-Solver
+# OCL2CSP : Choco
+**OCL Nodes** modeled as **CSPs** using **Choco-Solver**
 
 ## Compilation & Run
 ```bash
