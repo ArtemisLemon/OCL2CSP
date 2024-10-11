@@ -1,7 +1,7 @@
 # OCL2CSP : Choco
-**OCL Nodes** modeled as **CSPs** using **Choco-Solver**
-
 AIMT: OCL 2 CSP 4 ATLc
+
+**OCL Nodes** modeled as **CSPs** using **Choco-Solver**
 
 ## Compilation & Run
 ```bash
