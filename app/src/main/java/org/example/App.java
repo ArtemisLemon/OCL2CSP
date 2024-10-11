@@ -29,7 +29,7 @@ public class App {
 
     public static void main(String[] args) {
         Model m = new Model();
-        IntVar nullptr = m.intVar(0);
+        IntVar nullptr = m.intVar("nullptr",0);
 
 
         int a = 1, aptrs=5; //a2b []

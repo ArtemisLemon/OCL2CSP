@@ -6,15 +6,19 @@ import org.chocosolver.util.tools.ArrayUtils;
 
 public class PropArrayTable {
     IntVar[][] matrix;
-    int n, nn, d;
+    int n, nn, lb,ub;
+    IntVar[] nullptrs;
 
-    public PropArrayTable(Model m, int n, int nn, int lb, int ub, IntVar nullptr){
-        this.m=m;
+    public PropArrayTable(Model m, int n, int nn, int lb, int ub){
         this.n=n;
         this.nn=nn;
-        this.d=d;
+        this.lb=lb;
+        this.ub=ub;
+        this.matrix = m.intVarMatrix(n,nn,lb,ub);
 
-        if (nullptr!=null) matrix = m.intVarMatrix(n,nn,lb,ub);
+        
+        this.nullptrs = new IntVar[nn];
+        for(int i=0;i<nn;i++) nullptrs[i] = m.getVar(0);
     }
 
     public IntVar[] vars(){
