@@ -38,11 +38,11 @@ public class App {
 
 
         AdjList a1b = new AdjList(m, aptrs, b, nullptr, true); //self.var(b, min=0, max=5, "orderedSet")
-        AdjListTable b2c = new AdjListTable(m, bptrs, 1, c, nullptr, false); //B.AllInstances().var(c, min=0. max=1) //This is what should usually be used when modeling variable associations
+        AdjListTable b2c = new AdjListTable(m, b, bptrs, c, nullptr, false); //B.AllInstances().var(c, min=0. max=1) //This is what should usually be used when modeling variable associations
         b2c.ApplyConstainment();
         navCSP a1b2c = new navCSP(m, a1b, b2c); //self.var(b).var(c)
         int[] sel = {nullptr.getValue(),1,2};
-        Includes.includesAll(m, sel, a1b2c.adjList());
+        Inclusion.includesAll(m, sel, a1b2c.adjList());
         m.sum(a1b2c.vars(),"=",3).post();
 
 

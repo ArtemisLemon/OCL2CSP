@@ -18,7 +18,7 @@ public class PropArrayTable {
 
         
         this.nullptrs = new IntVar[nn];
-        for(int i=0;i<nn;i++) nullptrs[i] = m.getVar(0);
+        for(int i=0;i<nn;i++) nullptrs[i] = m.getVar(0).asIntVar();
     }
 
     public IntVar[] vars(){
