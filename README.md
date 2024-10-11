@@ -14,6 +14,7 @@ AIMT: OCL 2 CSP 4 ATLc
 ## CSPs:
 The CSPs are *composable* with compilation in mind.
 Generally, a `::nodeCSP` will provide `vars()` to pass information *up*.
+Calling methods like `setIsUnique` and `setContainment` can't be undone, as they `.post()` Choco constraints.
 
 ### UML CSPs:
 CSP of the model instance conforming to UML
