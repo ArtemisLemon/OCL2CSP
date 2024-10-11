@@ -31,9 +31,9 @@ CSP of the model instance conforming to OCL
   - includesAll : intvar[]
   - includesAll : adjlist
  
-### Coming Soon
-- PropArrayTable
-- AdjSet <- Choco Set Variables
+### Coming Next
+- PropArray
+- AdjSet <- Set Variables, Choco's Union as navCSP
 - Arithm (binary)
    - Node
    - Constraint
