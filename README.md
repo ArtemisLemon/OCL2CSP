@@ -10,7 +10,7 @@
 ./gradlew run
 ```
 ## CSPs:
-- Node
+- ::Node
    - vars()
 ### UML CSPs:
 CSP of the model instance conforming to UML
