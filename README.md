@@ -3,7 +3,7 @@ AIMT: OCL 2 CSP 4 ATLc
 
 **OCL Nodes** modeled as **CSPs** using **Choco-Solver**
 
-## Compilation & Run
+## Compile & Run
 ```bash
 # build
 ./gradlew build
