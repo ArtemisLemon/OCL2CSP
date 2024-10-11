@@ -1,5 +1,6 @@
 # OCL2CSP : Choco
 **OCL Nodes** modeled as **CSPs** using **Choco-Solver**
+AIMT: OCL 2 CSP 4 ATLc
 
 ## Compilation & Run
 ```bash
@@ -33,8 +34,12 @@ CSP of the model instance conforming to OCL
  
 ### Coming Next
 - PropArray
-- AdjSet <- Set Variables, Choco's Union as navCSP
 - Arithm (binary)
    - Node
    - Constraint
 - Sum    
+
+## Coming After
+- AdjSet <- Set Variables, Choco's Union as navCSP
+- EMF&OCL2CSP
+- ATLc Update
