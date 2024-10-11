@@ -3,7 +3,7 @@ package org.example;
 import org.chocosolver.solver.*;
 import org.chocosolver.solver.variables.IntVar;
 
-public class Includes {
+public class Inclusion {
     static void includes(Model m, int[] src, IntVar body){
         m.member(body, src).post();
     }
