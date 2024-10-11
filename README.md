@@ -32,6 +32,8 @@ CSP of the model instance conforming to OCL
   - includesAll : adjlist
  
 ### Coming Soon
+- PropArrayTable
+- AdjSet <- Choco Set Variables
 - Arithm (binary)
    - Node
    - Constraint
