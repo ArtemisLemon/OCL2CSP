@@ -1,5 +1,5 @@
 # OCL2CSP : Choco
-AIMT: OCL 2 CSP 4 ATLc
+AIMT: OCL 2 CSP 4 ATLc (CP++)
 
 **OCL Nodes** modeled as **CSPs** using **Choco-Solver**
 
