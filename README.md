@@ -18,7 +18,7 @@ AIMT: OCL 2 CSP 4 ATLc
 CSP of the model instance conforming to UML
 
 - AdjListTable::PropArrayTable : Associations as references <-> Pointer Arrays
-   - AdjList : reference <-> Pointer Array
+   - AdjList::IntVar[] : reference <-> Pointer Array
        - setIsUnique()
    - adjlist(objectID)
    - setContainment()
@@ -29,16 +29,16 @@ CSP of the model instance conforming to OCL
 - navCSP : Navigation <-> Property Arrays
   - navCSP(AdjList src, PropArrayTable prop)
 - Includes : Application of inclusion constraints (not reified, IF includes THEN ... not supported by this)
-  - includes : intvar
-  - includesAll : intvar[]
-  - includesAll : adjlist
+  - includes : (int[] src, intvar body)
+  - includesAll : (int[], intvar[] body)
+  - includesAll : (int[], adjlist)
  
 ### Coming Next
-- PropArray
+- PropArray::IntVar[]
 - Arithm (binary)
    - Node
    - Constraint
-- Sum    
+- Sum
 
 ## Coming After
 - AdjSet <- Set Variables, Choco's Union as navCSP
