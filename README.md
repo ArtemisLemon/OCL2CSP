@@ -12,8 +12,9 @@ AIMT: OCL 2 CSP 4 ATLc
 ./gradlew run
 ```
 ## CSPs:
-- ::Node
-   - vars()
+The CSPs are *composable* with compilation in mind.
+Generally, a `::nodeCSP` will provide `vars()` to pass information *up*.
+
 ### UML CSPs:
 CSP of the model instance conforming to UML
 
