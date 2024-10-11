@@ -24,4 +24,8 @@ public class PropArrayTable {
     public IntVar[] vars(){
         return ArrayUtils.concat(nullptrs, ArrayUtils.flatten(matrix)); //flatten sources, dummies at the beginning (lb++)
     }
+
+    public PropArray proparray(int i){
+        return new PropArray(matrix[i]);
+    }
 }
