@@ -32,13 +32,13 @@ public class App {
         IntVar nullptr = m.intVar(0);
 
 
-        int a = 1; //a2b []
-        int b = 6;
+        int a = 1, aptrs=5; //a2b []
+        int b = 6, bptrs=1;
         int c = 2;
 
 
-        AdjList a1b = new AdjList(m, 5, b, nullptr, true); //self.var(b, min=0, max=5, "orderedSet")
-        AdjListTable b2c = new AdjListTable(m, b, 1, c, nullptr, false); //B.AllInstances().var(c, min=0. max=1) //This is what should usually be used when modeling variable associations
+        AdjList a1b = new AdjList(m, aptrs, b, nullptr, true); //self.var(b, min=0, max=5, "orderedSet")
+        AdjListTable b2c = new AdjListTable(m, bptrs, 1, c, nullptr, false); //B.AllInstances().var(c, min=0. max=1) //This is what should usually be used when modeling variable associations
         b2c.ApplyConstainment();
         navCSP a1b2c = new navCSP(m, a1b, b2c); //self.var(b).var(c)
         int[] sel = {nullptr.getValue(),1,2};
