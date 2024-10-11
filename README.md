@@ -44,5 +44,5 @@ CSP of the model instance conforming to OCL
 
 ## Coming After
 - AdjSet <- Set Variables, Choco's Union as navCSP
-- EMF&OCL2CSP
+- XOCL2CSP
 - ATLc Update
